@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-program-card-component',
+  selector: 'app-program-card',
   template: `
     <div class='internalcard'>
       <div class='internalcardcontent'>
@@ -16,10 +16,14 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
     </div>
 `,
   styles: [
-    `.internalcard {border: 1px solid rgba(0, 0, 0, 0.03); box-shadow: 2px 5px 5px lightgrey;
-             background: white; margin: 5px; border-radius: 5px;  width: calc((100vw - 150px) / 7); vertical-align:top;display: inline-block; }
+    `.internalcard {
+      /* border: 1px solid rgba(0, 0, 0, 0.03); box-shadow: 2px 5px 5px lightgrey;
+             background: white; margin: 5px; border-radius: 5px; */
+               width: calc((100vw - 150px) / 7); vertical-align:top;display: inline-block; }
              `,
-    '.internalcardcontent { margin: 10px 10px 10px 10px; }',
+     `.internalcardcontent {
+        /* margin: 10px 10px 10px 10px;  */
+        }`,
     '.imagecontainer img { width: 100%; height: auto }',
     'h3 { font-size: 0.8rem; overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;overflow-wrap: initial; padding-left: 2px; }',
     '.header { font-size: 1rem; color: white; text-align: center; font-weight: bold; padding: 10px 0;}'
