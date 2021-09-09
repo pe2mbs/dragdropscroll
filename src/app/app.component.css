@@ -1,8 +1,3 @@
-.label-slider {
-  width: 100%;
-  display: inline-block;
-}
-
 .label-slider-container {
   overflow-x: auto;
   width: 100%;
@@ -10,38 +5,15 @@
   padding: 10px 0;
 }
 
-.label-item-marker {
-  width: 100%;
-  display: inline-block;
-}
-
 .label-item {
   display: inline-block;
   white-space: normal;
-  margin: 0 2.5px;
+  margin: 0 4px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   position: relative;
   opacity: 1;
 }
-
-.label-item-marker {
-  position: absolute;
-  left: -10px;
-  top: -80px;
-  width: calc(100%);
-  height: calc(100% + 90px);
-}
-
-.label-item-marker-line {
-  border-left: 2px solid black;
-  position: absolute;
-  left: 6.5px;
-  top: 0;
-  height: 100%;
-}
-
-
 
 .cdk-drag-preview {
   box-sizing: border-box;
