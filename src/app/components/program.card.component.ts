@@ -37,8 +37,6 @@ export class ProgramCard implements OnChanges {
   // onCchanges triggers only on primitive types.
   @Input('currentTime') currentTime: any;
 
-  public volledigenaam: string = '';
-  public displayCard: boolean = false;
   public colorTimeBox: string = 'orange';
 
   /**
