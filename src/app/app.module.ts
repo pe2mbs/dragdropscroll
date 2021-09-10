@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ProgramCard } from './components/program.card.component';
 import { ProgramCardContainer } from './components/program.card.container.component';
+import { ScrollingModule, CdkScrollableModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { ProgramCardContainer } from './components/program.card.container.compon
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DragDropModule,
+	DragDropModule,
+	ScrollingModule,
+	CdkScrollableModule
   ],
   providers: [],
 

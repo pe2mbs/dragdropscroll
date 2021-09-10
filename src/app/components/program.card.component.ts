@@ -30,25 +30,24 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
   ],
 })
 
-export class ProgramCard implements OnChanges {
+export class ProgramCard implements OnChanges 
+{
+ 	@Input('program') program: any;
+  	// The only reason I use the currentTime as a separate parameter is to trigger the onChanges.
+  	// onCchanges triggers only on primitive types.
+  	@Input('currentTime') currentTime: any;
 
-  @Input('program') program: any;
-  // The only reason I use the currentTime as a separate parameter is to trigger the onChanges.
-  // onCchanges triggers only on primitive types.
-  @Input('currentTime') currentTime: any;
+  	public colorTimeBox: string = 'orange';
 
-  public volledigenaam: string = '';
-  public displayCard: boolean = false;
-  public colorTimeBox: string = 'orange';
-
-  /**
-   * changes the color of the header is the program is running at the current time.
-   * @param changes
-   */
-  ngOnChanges(changes: SimpleChanges): void {
-    const start = new Date(this.program.PubDate);
-    const end = new Date(this.program.EndPubDate);
-    this.colorTimeBox = (start < this.currentTime && end > this.currentTime) ? 'red' : 'orange';
-  }
+  	/**
+   	* changes the color of the header is the program is running at the current time.
+   	* @param changes
+   	*/
+	ngOnChanges(changes: SimpleChanges): void 
+	{
+		const start = new Date(this.program.PubDate);
+ 		const end = new Date(this.program.EndPubDate);
+		this.colorTimeBox = (start < this.currentTime && end > this.currentTime) ? 'red' : 'orange';
+  	}
 }
 

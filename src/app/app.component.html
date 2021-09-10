@@ -1,17 +1,24 @@
 <div class='container'>
-  <button (click)="onClickLeft($event)">
-    <img class='img' src="../assets/left-arrow.svg" width="50" height="50">
-  </button>
-  <div #scrollEl cdk-scrollable class="label-slider-container" (wheel)="onWheel($event)">
-    <div cdkDropList [cdkDropListData]="programList" cdkDropListOrientation="horizontal"
-      (cdkDropListDropped)="drop($event)" #dropList>
-      <div class="label-item" *ngFor="let item of programList" cdkDrag>
-        <app-program-card-container #card [id]="item.Id" [program]='item' [currentTime]='currentTime'>
-        </app-program-card-container>
-      </div>
-    </div>
-  </div>
-  <button (click)="onClickRight($event)">
-    <img src="../assets/right-arrow.svg" width="50" height="50">
-  </button>
+  	<button (click)="onClickLeft($event)">
+    	<img class='img' src="../assets/left-arrow.svg" width="50" height="50">
+  	</button>
+	<div #dropList #scrollEl 
+					cdkDropList 
+					cdkScrollable 
+					class="label-slider-container" 
+					(wheel)="onWheel($event)"
+					[cdkDropListData]="programList" 
+					cdkDropListOrientation="horizontal"
+      				(cdkDropListDropped)="drop($event)" >
+      	<div class="label-item" *ngFor="let item of programList" cdkDrag>
+			<app-program-card-container #card 
+										[id]="item.Id" 
+										[program]='item' 
+										[currentTime]='currentTime'>
+        	</app-program-card-container>
+      	</div>
+	</div>
+  	<button (click)="onClickRight($event)">
+    	<img src="../assets/right-arrow.svg" width="50" height="50">
+  	</button>
 </div>
